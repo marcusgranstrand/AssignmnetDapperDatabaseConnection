@@ -1,0 +1,26 @@
+﻿@model List<Cities>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<table>
+	<tr>
+		<td>ID</td>
+		<td>Name</td>
+		<td>Population</td>
+		<td>CountryCode</td>
+	</tr>
+@foreach(Cities cities in @Model)
+	{
+		<tr>
+			<td>@cities.Id</td>
+			<td>@cities.Name</td>
+			<td>@cities.Population</td>
+			<td>@cities.CountryCode</td>
+		</tr>
+	}
+</table>
