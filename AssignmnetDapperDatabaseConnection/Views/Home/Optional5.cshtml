@@ -1,0 +1,30 @@
+﻿@model List<Cities>
+@{
+	ViewData["Title"] = "Optional 5 Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome to Optional 5</h1>
+</div>
+<div class=" text-center">
+	On this page you find the results for:<br /><br />
+	<b>
+		Read all cities in a continent with a life expectancy above a certain age.<br />
+		I chose a life expectancy above 50 and the continent of Africa<br /><br />
+	</b>
+</div>
+<table align="center">
+	<tr>		
+		<td>Name</td>
+		<td>Continent</td>
+		<td>Life Expectancy</td>
+	</tr>
+	@foreach (Cities citiesOptional5 in @Model)
+	{
+		<tr>
+			<td>@citiesOptional5.Name</td>
+			<td>@citiesOptional5.Continent</td>
+			<td>@citiesOptional5.LifeExpectancy</td>
+		</tr>
+	}
+</table>

@@ -1,0 +1,31 @@
+﻿@model List<Cities>
+@{
+	ViewData["Title"] = "Home Basic Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome to the Basic Page</h1>
+</div>
+<div class=" text-center">On this page you find the results for:<br/><br/>
+	<b>Present a list of strongly typed city
+		data for all cities in a span between two population numbers.<br/> In this case I chose between 15 000 and
+		350 000. The sorting on the cities ID was done automatically and not chosen by me.<br/><br/>
+	</b>
+</div>
+<table align="center">
+	<tr>
+		<td>ID</td>
+		<td>Name</td>
+		<td>Population</td>
+		<td>CountryCode</td>
+	</tr>
+	@foreach (Cities citiesBasic in @Model)
+	{
+		<tr>
+			<td>@citiesBasic.Id</td>
+			<td>@citiesBasic.Name</td>
+			<td>@citiesBasic.Population</td>
+			<td>@citiesBasic.CountryCode</td>
+		</tr>
+	}
+</table>

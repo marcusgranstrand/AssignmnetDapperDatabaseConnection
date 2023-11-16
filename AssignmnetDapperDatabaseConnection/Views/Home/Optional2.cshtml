@@ -1,0 +1,28 @@
+﻿@model List<Cities>
+@{
+	ViewData["Title"] = "Optional 2 Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome to Optional 2</h1>
+</div>
+<div class=" text-center">
+	On this page you find the results for:<br /><br />
+	<b>
+		Read all cities by country code.<br /> I left the automated Descending order even if I think 
+		that looks wrong.<br /><br />
+	</b>
+</div>
+<table align="center">
+	<tr>		
+		<td>Name</td>		
+		<td>CountryCode</td>
+	</tr>
+	@foreach (Cities citiesOptional2 in @Model)
+	{
+		<tr>			
+			<td>@citiesOptional2.Name</td>			
+			<td>@citiesOptional2.CountryCode</td>
+		</tr>
+	}
+</table>

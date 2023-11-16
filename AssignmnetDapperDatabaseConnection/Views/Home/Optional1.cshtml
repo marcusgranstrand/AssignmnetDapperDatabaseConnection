@@ -1,0 +1,31 @@
+﻿@model List<Cities>
+@{
+	ViewData["Title"] = "Optional 1 Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome to Optional 1</h1>
+</div>
+<div class=" text-center">
+	On this page you find the results for:<br /><br />
+	<b>
+		Limit the number of posts read.<br/> I chose to limit it to 100 posts.<br /><br />
+	</b>
+</div>
+<table align="center">
+	<tr>
+		<td>ID</td>
+		<td>Name</td>
+		<td>Population</td>
+		<td>CountryCode</td>
+	</tr>
+	@foreach (Cities citiesOptional1 in @Model)
+	{
+		<tr>
+			<td>@citiesOptional1.Id</td>
+			<td>@citiesOptional1.Name</td>
+			<td>@citiesOptional1.Population</td>
+			<td>@citiesOptional1.CountryCode</td>
+		</tr>
+	}
+</table>

@@ -1,0 +1,28 @@
+﻿@model List<Cities>
+@{
+	ViewData["Title"] = "Optional 4 Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome to Optional 4</h1>
+</div>
+<div class=" text-center">
+	On this page you find the results for:<br /><br />
+	<b>
+		Read all cities in a country.<br />
+		I chose to get the Swedish cities<br /><br />
+	</b>
+</div>
+<table align="center">
+	<tr>		
+		<td>Name</td>		
+		<td>CountryCode</td>
+	</tr>
+	@foreach (Cities citiesOptional4 in @Model)
+	{
+		<tr>			
+			<td>@citiesOptional4.Name</td>			
+			<td>@citiesOptional4.CountryCode</td>
+		</tr>
+	}
+</table>

@@ -1,0 +1,30 @@
+﻿@model List<Cities>
+@{
+	ViewData["Title"] = "Optional 3 Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome to Optional 3</h1>
+</div>
+<div class=" text-center">
+	On this page you find the results for:<br /><br />
+	<b>
+		Read all European countries ordered by life expactancy, high to low.<br />
+		Might not have been able to solve the decimals til publish<br /><br />
+	</b>
+</div>
+<table align="center">
+	<tr>		
+		<td>Name</td>
+		<td>Life Expectancy</td>
+		<td>Continent</td>
+	</tr>
+	@foreach (Cities citiesOptional3 in @Model)
+	{
+		<tr>			
+			<td>@citiesOptional3.Name</td>
+			<td>@citiesOptional3.LifeExpectancy</td>
+			<td>@citiesOptional3.Continent</td>
+		</tr>
+	}
+</table>
