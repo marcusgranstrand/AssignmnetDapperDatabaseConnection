@@ -61,7 +61,7 @@ namespace AssignmnetDapperDatabaseConnection.DataAccess
 
 			// sqlOptional3 works in MySQL Workbench
 			string sqlOptional3 = "" +
-			"SELECT name, lifeexpectancy, continent " +
+			"SELECT name, lifeexpectancy,continent " +
 			"FROM country " +
 			"WHERE lifeexpectancy IS NOT NULL " +
 			"AND continent = 'europe' " +

@@ -6,7 +6,7 @@
         public string? Name { get; set; }
         public int Population { get; set; }
         public string? CountryCode { get; set; }
-        public double LifeExpectancy { get; set; }
+        public float LifeExpectancy { get; set; }
         public string? CountryName { get; set; }
 		public string? Continent { get; set; }
     }
